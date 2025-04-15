@@ -4,270 +4,175 @@
   <meta charset="utf-8">
   <meta name="description"
         content="声优样音展示">
-  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>声优样音展示</title>
-
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-
-    gtag('js', new Date());
-
-    gtag('config', 'G-PYVRSFMDRL');
-  </script>
-
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-        rel="stylesheet">
-
-  <link rel="stylesheet" href="./static/css/bulma.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/favicon.svg">
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script defer src="./static/js/fontawesome.all.min.js"></script>
-  <script src="./static/js/bulma-carousel.min.js"></script>
-  <script src="./static/js/bulma-slider.min.js"></script>
-  <script src="./static/js/index.js"></script>
 </head>
 <body>
-
-<nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-
-  </div>
-</nav>
-
-
-<section class="hero">
-  <div class="hero-body">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered">
-        <div class="column has-text-centered">
-
-          <div class="column has-text-centered">
-            <div class="publication-links">
-              <!-- PDF Link. -->
-              <span class="link-block">
-                <a href="https://arxiv.org/pdf/2011.12948"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
-                  </span>
-                  <span>Paper</span>
-                </a>
-              </span>
-              <span class="link-block">
-                <a href="https://arxiv.org/abs/2011.12948"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
-              <!-- Video Link. -->
-              <span class="link-block">
-                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-youtube"></i>
-                  </span>
-                  <span>Video</span>
-                </a>
-              </span>
-              <!-- Code Link. -->
-              <span class="link-block">
-                <a href="https://github.com/google/nerfies"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-github"></i>
-                  </span>
-                  <span>Code</span>
-                  </a>
-              </span>
-              <!-- Dataset Link. -->
-              <span class="link-block">
-                <a href="https://github.com/google/nerfies/releases/tag/0.1"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="far fa-images"></i>
-                  </span>
-                  <span>Data</span>
-                  </a>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/teaser.mp4"
-                type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
-        free-viewpoint
-        portraits.
-      </h2>
-    </div>
-  </div>
-</section>
-
-
-<section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-steve">
-          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/steve.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-chair-tp">
-          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/chair-tp.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-shiba">
-          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/shiba.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/fullbody.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-blueshirt">
-          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/blueshirt.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-mask">
-          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/mask.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-coffee">
-          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/coffee.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-toby">
-          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/toby2.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<section class="section">
-  <div class="container is-max-desktop">
-    <!-- Abstract. -->
-    <!--/ Abstract. -->
-
-    <!-- Paper video. -->
-    <!--/ Paper video. -->
-  </div>
-</section>
-
-
-<section class="section">
-  <div class="container is-max-desktop">
-
-    <div class="columns is-centered">
-
-      <!-- Visual Effects. -->
-      <div class="column">
-        <div class="content">
-          <h2 class="title is-3">Visual Effects</h2>
-          <p>
-            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
-            would be impossible without nerfies since it would require going through a wall.
-          </p>
-          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/dollyzoom-stacked.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-      <!--/ Visual Effects. -->
-
-      <!-- Matting. -->
-      <div class="column">
-        <h2 class="title is-3">Matting</h2>
-        <div class="columns is-centered">
-          <div class="column content">
-            <p>
-              As a byproduct of our method, we can also solve the matting problem by ignoring
-              samples that fall outside of a bounding box during rendering.
-            </p>
-            <video id="matting-video" controls playsinline height="100%">
-              <source src="./static/videos/matting.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-
-        </div>
-      </div>
-    </div>
-    <!--/ Matting. -->
-
-    <!-- Animation. -->
-    <div class="columns is-centered">
-
-
-       
-        </div>
-        <!--/ Re-rendering. -->
-
-      </div>
-    </div>
-    <!--/ Animation. -->
-
-
-    <!-- Concurrent Work. -->
-    <!--/ Concurrent Work. -->
-
-  </div>
-</section>
-
-
-
+     <h1>声优样音展示</h1>
+    <div id="userList"></div>
+	<input type="text" id="searchInput" onkeyup="myFunction()" placeholder="搜索...">
+	<button onclick="myFunction()">搜索</button>
+    <table id="tabUser" border="1" width=100%>
+	    <thead>
+			<tr align="left">
+				<th width=10%>编号</th>
+				<th width=20%>名字</th>
+				<th width=20%>供应商</th>
+				<th width=50%>音频</th>
+			</tr>
+		</thead>
+		<tbody>
+            <!-- Data will be inserted here -->
+        </tbody>
+    </table>
+    <div id="pagination"></div>
 
 </body>
 </html>
+<script>
+  // 定义数据结构
+        const users = [
+            { id: 1, name: "Alice", suppliers: "alice@example.com" },
+            { id: 2, name: "Bob", suppliers: "bob@example.com" },
+            { id: 3, name: "Bob", suppliers: "bob@example.com" },
+            { id: 4, name: "Bob", suppliers: "bob@example.com" },
+            { id: 5, name: "Bob", suppliers: "bob@example.com" },
+            { id: 6, name: "Bob", suppliers: "bob@example.com" },
+            { id: 7, name: "Bob", suppliers: "bob@example.com" },
+            { id: 8, name: "Bob", suppliers: "bob@example.com" },
+            { id: 9, name: "Bob", suppliers: "Alice@example.com" },
+            { id: 10, name: "Bob", suppliers: "bob@example.com" },
+            { id: 11, name: "Bob", suppliers: "bob@example.com" },
+            { id: 12, name: "Bob", suppliers: "bob@example.com" },
+            { id: 13, name: "Bob", suppliers: "bob@example.com" },
+            { id: 14, name: "Bob", suppliers: "bob@example.com" }
+        ];
+ 
+        // 将数据转换为JSON字符串（可选步骤，如果你的数据已经是JSON格式，可以跳过）
+        const usersJSON = JSON.stringify(users);
+		
+</script>
+<script>
+    // 模拟从服务器获取数据的函数（实际上我们从内存中读取数据）
+    function fetchData() {
+        return new Promise((resolve) => {
+            setTimeout(() => {
+                resolve(users); // 直接解析预先定义的数据
+            }, 0); // 模拟网络延迟
+        });
+    }
+    let currentPage = 1;
+    const pageSize = 10;
+	  const paginationDiv = document.getElementById('pagination');
+	  function displayData(page){
+	
+		    const startIndex = (page - 1) * pageSize;
+		    const endIndex = page * pageSize;
+		    const currentPageData = users.slice(startIndex, endIndex);
+		    const table = document.querySelector('#tabUser tbody');
+		    table.innerHTML = '';
+            // 使用Fetch API加载数据（实际上是从内存中加载）
+            //fetchData().then(data => {
+            currentPageData.forEach(user => {
+	    	    const tr = document.createElement('tr');
+	    	    const td_userid = document.createElement('td');
+	    	    const td_username = document.createElement('td');
+	    	    const td_suppliers = document.createElement('td');
+	    	    const td_video = document.createElement('td');
+	    	    var audioElement = document.createElement('audio');
+	  
+	          audioElement.controls = true
+	          audioElement.src = "08_彭嘉嘉.wav"
+	          audioElement.style.width = "100%"
+	    
+            //赋值节点
+            td_userid.innerHTML = `${user.id}`;
+            td_username.innerHTML = `${user.name}`;
+            td_suppliers.innerHTML = `${user.suppliers}`;
+            td_video.appendChild(audioElement);
+	    
+	    
+            //添加节点
+            tr.appendChild(td_userid);
+            tr.appendChild(td_username);
+            tr.appendChild(td_suppliers);
+            tr.appendChild(td_video);
+            table.appendChild(tr);
+	          // 确保在元素添加到DOM后绑定事件监听器
+	          audioElement.addEventListener('click', function() {
+	          console.log('Audio is clicked!');
+	          });
+		    });
+}
+	function refreshTable() {
+		  displayData(currentPage)	
+      }
+	function updatePagination() {
+      paginationDiv.innerHTML = ''; // 清空分页内容
+      const totalPages = Math.ceil(users.length / pageSize); // 计算总页数
+      for (let i = 1; i <= totalPages; i++) {
+          const pageButton = document.createElement('button');
+          pageButton.textContent = i;
+          pageButton.addEventListener('click', function() {
+              currentPage = i; // 更新当前页码
+              displayData(currentPage); // 重新显示数据和分页按钮
+            });
+          if (i === currentPage) {
+              pageButton.style.fontWeight = 'bold'; // 当前页高亮显示
+          }
+          paginationDiv.appendChild(pageButton); // 添加到分页区域
+          if (i !== totalPages) { // 在每个按钮后添加空格分隔，除了最后一个按钮外
+              paginationDiv.appendChild(document.createTextNode(' '));
+          }
+        }
+    }
+  function myFunction() {  
+		  // 获取输入框的值和表格元素  
+		  var input, filter, table, tr, td, i, txtValue;  
+		  input = document.getElementById("searchInput");  
+		  filter = input.value.toUpperCase(); // 将输入值转换为大写字母，以便进行不区分大小写的搜索  
+		  table = document.getElementById("tabUser");  
+		  tr = table.getElementsByTagName("tr"); // 获取表格中的所有行元素  
+		  // 遍历表格中的每一行，并检查是否包含输入值  
+		  for (i = 0; i < tr.length; i++) {  
+			    td = tr[i].getElementsByTagName("td")[1]; // 获取当前行的第一个单元格元素（即姓名单元格）  
+			    td_sup = tr[i].getElementsByTagName("td")[2]; // 获取当前行的第一个单元格元素（即姓名单元格）  
+			    if (td) { // 如果单元格存在，则进行下一步操作（防止空行）  
+			        txtValue = td.textContent || td.innerText; // 获取单元格的文本内容，以便进行比较操作  
+			        txtValue_sup = td_sup.textContent || td_sup.innerText; // 获取单元格的文本内容，以便进行比较操作  
+			    if (txtValue.toUpperCase().indexOf(filter) > -1 || txtValue_sup.toUpperCase().indexOf(filter) > -1)  { // 如果单元格文本中包含输入值，则显示该行，否则隐藏该行  
+				      tr[i].style.display = ""; // 显示行元素（将display属性设置为空字符串）  
+			    } else { // 如果单元格文本中不包含输入值，则隐藏该行（将display属性设置为"none"）  
+				      tr[i].style.display = "none"; // 隐藏行元素（将display属性设置为"none"）  
+			    }  
+			    }         
+		}     
+    }
+	
+	displayData(currentPage);	
+	const prevButton = document.createElement('button');
+	const nextButton = document.createElement('button');
+	
+	prevButton.textContent = '上一页';
+	nextButton.textContent = '下一页';
+	
+	prevButton.addEventListener('click', () => {
+	if (currentPage > 1) {
+		  currentPage--;
+		  refreshTable();
+	}
+	});
+	
+	nextButton.addEventListener('click', () => {
+	if (currentPage < Math.ceil(users.length / pageSize)) {
+		  currentPage++;
+		  refreshTable();
+	}
+	});
+	
+	document.body.appendChild(prevButton);
+	document.body.appendChild(nextButton);
+	
+	
+	updatePagination();
+	
+	</script>  
